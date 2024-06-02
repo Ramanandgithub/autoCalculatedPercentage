@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <style>
@@ -14,28 +17,39 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        background-color: bisque;
+        background-color: #fff;
         overflow-x: hidden;
+        font-family: "Oswald", sans-serif;
+        font-weight: 400;
 
     }
-    h2{
-        -webkit-text-stroke: 1px rgb(49, 21, 232);
+    .wholeForm{
+        width: 89.5%;
+        border: 1px solid black;
+        border-radius: 3px;
+    }
+
+    h2 {
+        -webkit-text-stroke: 1px rgb(79, 181, 245);
         color: transparent;
-        /* font-size: 25px; */
+    
         font-weight: bold;
         text-align: center;
 
 
     }
-    .same{
+
+    .same {
         width: 100px;
         padding: 5px 2px;
         margin-top: 0;
     }
-    table{
+
+    table {
         margin-top: 20px;
     }
-    input{
+
+    input {
         padding: 5px 2px;
         border: none;
         outline: none;
@@ -43,105 +57,135 @@
         /* border-left: 2px solid salmon; */
     }
 
+    input::placeholder {
+        font-family: "PT Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
     #form {
         display: none;
+    }
+
+    tr th {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
     }
 </style>
 
 <body>
 
-    <div>
+    
+
+    <div class="navbar">
+        <img src="logo.jpg" alt="" width="100%" style="border-radius: 3px;">
+    </div>
+
+    <div class="wholeForm">
 
         <div>
             <h2>Student Form</h2>
         </div>
 
-        <table align="center">
+        <table align="center" width="100%" cellspacing="20">
             <tr>
                 <th>Student Name</th>
                 <th>Student's Father Name</th>
-                <th>Student's Email</th>
-                <th>Contacts Number</th>
+
             </tr>
             <tr>
                 <th><input type="text" placeholder="Sudent name"></th>
                 <th><input type="text" placeholder="father name"></th>
+
+            </tr>
+            <tr>
+                <th>Student's Email</th>
+                <th>Contacts Number</th>
+            </tr>
+            <tr>
                 <th><input type="email" placeholder="email"></th>
                 <th><input type="text" placeholder="stu contact"></th>
+
             </tr>
+
         </table>
 
-    </div>
-
-    <div>
-        <p>Do you have any qualification?</p>
-        <select name="" id="dropdown" class="same">
-            <option value="">select</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
-    </div>
 
 
-    <div id="form">
-
-
-
-
-        <div class="conatiner">
-
-            <table width="70%" align="center" cellpadding="10" cellspacing="0" border="2">
-                <tr>
-                    <th>Course</th>
-                    <th>Roll NO</th>
-                    <th>Passing Year</th>
-                    <th>College</th>
-
-
-                </tr>
-                <tr>
-                    <th><select name="" id="" class="same">
-                        <option value="">select</option>
-                        <option value="">B Tech</option>
-                        <option value="">BBA</option>
-                        <option value="">BCA</option>
-                        <option value="">M Tech</option>
-                        <option value="">MBA</option>
-                        <option value="">MCA</option>
-                        <option value="">BA</option>
-                        <option value="">B Sc.</option>
-                        <option value="">B com</option>
-                    </select></th>
-                    <th><input type="number" name="" id="rollno"></th>
-                    <th><input type="number" name="" id="passingyear"></th>
-                    <th><input type="text" name="" id="college"></th>
-
-                </tr>
-                <tr>
-                    <th>Obtain Marks</th>
-                    <th>Maximum Marks</th>
-                    <th>Percentage</th>
-                    <th>Status</th>
-
-                </tr>
-                <tr>
-                    <th><input type="number" name="" id="omarks"></th>
-                    <th><input type="number" name="" id="mmarks" value="0"></th>
-                    <th><input type="number" name="" id="percentage"></th>
-                    <th><input type="text" name="" id="status"></th>
-
-                </tr>
-                <tr>
-                    <th colspan="4"><button>Submit</button></th>
-
-                </tr>
-            </table>
-
-
+        <div style="width: 200px;margin: 10px ;margin-left: 200px;">
+            <p>Do you have any qualification?</p>
+            <select name="" id="dropdown" class="same">
+                <option value="">select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
         </div>
+
+
+        <div id="form">
+
+
+
+
+            <div class="conatiner">
+
+                <table width="70%" align="center" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <th>Course</th>
+                        <th>Roll NO</th>
+
+                        <th>Obtain Marks</th>
+                        <th>Maximum Marks</th>
+                        <th>Percentage</th>
+                        <th>Status</th>
+
+
+                    </tr>
+                    <tr>
+                        <th><select name="" id="" class="same">
+                                <option value="">select</option>
+                                <option value="">B Tech</option>
+                                <option value="">BBA</option>
+                                <option value="">BCA</option>
+                                <option value="">M Tech</option>
+                                <option value="">MBA</option>
+                                <option value="">MCA</option>
+                                <option value="">BA</option>
+                                <option value="">B Sc.</option>
+                                <option value="">B com</option>
+                            </select></th>
+                        <th><input type="number" name="" id="rollno"></th>
+
+                        <th><input type="number" name="" id="omarks"></th>
+                        <th><input type="number" name="" id="mmarks" value="0"></th>
+                        <th><input type="number" name="" id="percentage"></th>
+                        <th><input type="text" name="" id="status"></th>
+
+                    </tr>
+                    <tr>
+
+
+                    </tr>
+                    <tr>
+
+
+                    </tr>
+                    <tr>
+                        <th colspan="6"><button>Submit</button></th>
+
+                    </tr>
+                </table>
+
+
+            </div>
+        </div>
+
     </div>
 
     <script src="task3.js"></script>
+    
+    
 
 
 </body>
